@@ -1,0 +1,64 @@
+# Project: Inheritance
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = singleInheritance.o accessParentConstructor.o accessParentMemberFunctions.o functionOverriding.o publicInheritance.o protectedInheritance.o privateInheritance.o multilevelInheritance.o "multilevelInheritance\ withParameters.o" multipleInheritance.o constructorMultipleInheritance.o "constructor\ withParameters_MultipleInheritance.o" "multipleInheritance\ ambiguityRemoveOverriding.o"
+LINKOBJ  = singleInheritance.o accessParentConstructor.o accessParentMemberFunctions.o functionOverriding.o publicInheritance.o protectedInheritance.o privateInheritance.o multilevelInheritance.o "multilevelInheritance withParameters.o" multipleInheritance.o constructorMultipleInheritance.o "constructor withParameters_MultipleInheritance.o" "multipleInheritance ambiguityRemoveOverriding.o"
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Inheritance.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+singleInheritance.o: singleInheritance.cpp
+	$(CPP) -c singleInheritance.cpp -o singleInheritance.o $(CXXFLAGS)
+
+accessParentConstructor.o: accessParentConstructor.cpp
+	$(CPP) -c accessParentConstructor.cpp -o accessParentConstructor.o $(CXXFLAGS)
+
+accessParentMemberFunctions.o: accessParentMemberFunctions.cpp
+	$(CPP) -c accessParentMemberFunctions.cpp -o accessParentMemberFunctions.o $(CXXFLAGS)
+
+functionOverriding.o: functionOverriding.cpp
+	$(CPP) -c functionOverriding.cpp -o functionOverriding.o $(CXXFLAGS)
+
+publicInheritance.o: publicInheritance.cpp
+	$(CPP) -c publicInheritance.cpp -o publicInheritance.o $(CXXFLAGS)
+
+protectedInheritance.o: protectedInheritance.cpp
+	$(CPP) -c protectedInheritance.cpp -o protectedInheritance.o $(CXXFLAGS)
+
+privateInheritance.o: privateInheritance.cpp
+	$(CPP) -c privateInheritance.cpp -o privateInheritance.o $(CXXFLAGS)
+
+multilevelInheritance.o: multilevelInheritance.cpp
+	$(CPP) -c multilevelInheritance.cpp -o multilevelInheritance.o $(CXXFLAGS)
+
+"multilevelInheritance\ withParameters.o": multilevelInheritance\ withParameters.cpp
+	$(CPP) -c "multilevelInheritance withParameters.cpp" -o "multilevelInheritance withParameters.o" $(CXXFLAGS)
+
+multipleInheritance.o: multipleInheritance.cpp
+	$(CPP) -c multipleInheritance.cpp -o multipleInheritance.o $(CXXFLAGS)
+
+constructorMultipleInheritance.o: constructorMultipleInheritance.cpp
+	$(CPP) -c constructorMultipleInheritance.cpp -o constructorMultipleInheritance.o $(CXXFLAGS)
+
+"constructor\ withParameters_MultipleInheritance.o": constructor\ withParameters_MultipleInheritance.cpp
+	$(CPP) -c "constructor withParameters_MultipleInheritance.cpp" -o "constructor withParameters_MultipleInheritance.o" $(CXXFLAGS)
+
+"multipleInheritance\ ambiguityRemoveOverriding.o": multipleInheritance\ ambiguityRemoveOverriding.cpp
+	$(CPP) -c "multipleInheritance ambiguityRemoveOverriding.cpp" -o "multipleInheritance ambiguityRemoveOverriding.o" $(CXXFLAGS)

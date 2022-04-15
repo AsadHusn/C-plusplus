@@ -1,0 +1,49 @@
+# Project: FileHandling
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = writecityName.o readCityNames.o readingLine.o writeChar.o readChar.o writingBinaryData.o "writingStructureData\ toBinary.o" "readingStructureData\ fromBinary.o"
+LINKOBJ  = writecityName.o readCityNames.o readingLine.o writeChar.o readChar.o writingBinaryData.o "writingStructureData toBinary.o" "readingStructureData fromBinary.o"
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = FileHandling.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+writecityName.o: writecityName.cpp
+	$(CPP) -c writecityName.cpp -o writecityName.o $(CXXFLAGS)
+
+readCityNames.o: readCityNames.cpp
+	$(CPP) -c readCityNames.cpp -o readCityNames.o $(CXXFLAGS)
+
+readingLine.o: readingLine.cpp
+	$(CPP) -c readingLine.cpp -o readingLine.o $(CXXFLAGS)
+
+writeChar.o: writeChar.cpp
+	$(CPP) -c writeChar.cpp -o writeChar.o $(CXXFLAGS)
+
+readChar.o: readChar.cpp
+	$(CPP) -c readChar.cpp -o readChar.o $(CXXFLAGS)
+
+writingBinaryData.o: writingBinaryData.cpp
+	$(CPP) -c writingBinaryData.cpp -o writingBinaryData.o $(CXXFLAGS)
+
+"writingStructureData\ toBinary.o": writingStructureData\ toBinary.cpp
+	$(CPP) -c "writingStructureData toBinary.cpp" -o "writingStructureData toBinary.o" $(CXXFLAGS)
+
+"readingStructureData\ fromBinary.o": readingStructureData\ fromBinary.cpp
+	$(CPP) -c "readingStructureData fromBinary.cpp" -o "readingStructureData fromBinary.o" $(CXXFLAGS)
