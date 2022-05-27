@@ -3,8 +3,8 @@
 using namespace std;
 int main()
 {
-	fstream obj("asad.txt", ios_base::out);
-	if(!obj)
+	fstream out("asad.txt", ios_base::out);
+	if(!out)
 	{
 		cout<<"Error";
 		exit(1);
@@ -14,15 +14,15 @@ int main()
 	{
 		cout<<"Enter string : ";
 		gets(str);
-		obj<<str<<endl;
+		out<<str<<endl;
 	}
-	obj.close();
-	obj.open("asad.txt", ios::in);
-	while(!obj.eof())
+	out.close();
+	out.open("asad.txt", ios::in);
+	while(!out.eof())
 	{
-		obj.getline(str,50);
+		out.getline(str,50);
 		cout<<str<<endl;
 	}
-	obj.close();
+	out.close();
 	return 0;
 }

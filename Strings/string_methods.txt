@@ -1,7 +1,9 @@
-Input
+Input char[]
 cin
 cin.getline()
 cin.get()
+
+Input string
 getline(cin,str)
 
 -------
