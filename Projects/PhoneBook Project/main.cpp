@@ -64,16 +64,16 @@ int main()
 void menu()
 {
 		cout<<endl<<"*****PhoneBook*****"<<endl;
-		cout<<"1) Add New Record"<<endl;
-		cout<<"2) Display All Records"<<endl;
-		cout<<"3) Search Person Name"<<endl;
-		cout<<"4) Search Telephone No."<<endl;
-		cout<<"5) Update Telephone No."<<endl;
+		cout<<"1) Add New contact"<<endl;
+		cout<<"2) Display All contacts"<<endl;
+		cout<<"3) Search by Name"<<endl;
+		cout<<"4) Search by Number."<<endl;
+		cout<<"5) Update Number"<<endl;
 		cout<<"6) Exit"<<endl;
 		cout<<"7) Clear Screen"<<endl;
 		cout<<"8) Delete Contact"<<endl;
-		cout<<"9) Truncate"<<endl;
-		cout<<endl<<"Select Option: ";
+		cout<<"9) Clear File"<<endl;
+		cout<<endl<<"\tSelect Option: ";
 		cin>>option;
 		cout<<endl;
 }
