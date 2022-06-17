@@ -1,0 +1,5 @@
+Dev-Cpp\MinGW64\x86_64-w64-mingw32\include
+Dev-Cpp\MinGW64\x86_64-w64-mingw32\lib
+TDM – GCC version to 4.9.2 32-bit release.
+-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+-libgcc -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
