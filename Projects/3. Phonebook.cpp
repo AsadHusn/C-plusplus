@@ -119,7 +119,7 @@ void show()
 		count++;
 	}
 	if(count == 0)
-	puts("\t\t** File is empty");
+	puts("\t\t** No contacts");
 	else
 	cout<<"\t\t** Contacts = "<<count<<endl;
 	file.close();
